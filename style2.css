@@ -1,15 +1,14 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
 }
 body {
   background: #ebebeb;
-  /* text-align: center; */
-}
+} */
 
 /*--- Start page --*/
-.header {
+/* .header {
   min-height: 100vh;
   width: 100%;
   background-image:
@@ -18,7 +17,6 @@ body {
   background-size: cover;
   position: relative;
 }
-
 .text-box {
   width: 90%;
   color: #fff;
@@ -51,16 +49,198 @@ body {
   border: 1px solid #fff;
   background: #bb0000;
   transition: 1s;
+} */
+
+/* ===========================================
+   Style inspired by FX "Shōgun" viewers guide
+   Dark, cinematic, bold uppercase nav
+   =========================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.content {
+body {
+  background-color: #0c0c0c;
+  color: #e8e3d8;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+/* ---------- HEADER / NAV ---------- */
+
+.header {
+  background-color: #111111;
+  border-bottom: 2px solid #8a1f1f;
+  padding: 0;
+
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.text-box {
   display: flex;
-  /* flex-wrap: wrap; */
-  /* flex-grow: 4; */
-  flex-direction: column;
-  align-items: stretch;
-  padding: 0 20vw;
-  max-width: 1080px;
-  /* text-align: center; */
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  padding: 18px 0;
+}
+
+.visit-button {
+  text-decoration: none;
+  color: #d4af6a;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 10px 28px;
+  border: 1px solid #d4af6a;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.visit-button:hover {
+  background-color: #d4af6a;
+  color: #000;
+}
+
+/* ---------- MAIN CONTENT WRAPPER ---------- */
+
+.content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 24px 100px;
+}
+
+h1 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #f4ede0;
+  text-align: center;
+  margin-bottom: 50px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #8a1f1f;
+}
+
+h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #d4af6a;
+  margin-top: 50px;
+  margin-bottom: 18px;
+  position: relative;
+  padding-left: 16px;
+  border-left: 4px solid #8a1f1f;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #c9bfa5;
+  margin-top: 28px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #d6d0c4;
+  margin-bottom: 16px;
+}
+
+strong {
+  color: #d4af6a;
+  font-weight: 600;
+}
+
+.introduction p {
+  font-size: 1.1rem;
+  color: #ece6d8;
+}
+
+/* ---------- LISTS ---------- */
+
+ul,
+ol {
+  margin: 0 0 24px 24px;
+}
+
+ul li,
+ol li {
+  margin-bottom: 10px;
+  color: #d6d0c4;
+}
+
+ul li::marker {
+  color: #8a1f1f;
+}
+
+ol li::marker {
+  color: #d4af6a;
+  font-weight: 600;
+}
+
+/* ---------- SECTIONS AS CARDS ---------- */
+
+.bushido,
+.quotidien,
+.evolution,
+.ources,
+.frise-chronologique {
+  background-color: #161616;
+  border: 1px solid #2a2a2a;
+  border-radius: 4px;
+  padding: 32px 36px;
+  margin-bottom: 32px;
+}
+
+/* ---------- LINKS ---------- */
+
+a {
+  color: #d4af6a;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+a:hover {
+  border-bottom: 1px solid #d4af6a;
+}
+
+/* ---------- IMAGE ---------- */
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 24px auto 0;
+  border-radius: 4px;
+  border: 1px solid #2a2a2a;
+  filter: grayscale(15%) contrast(1.05);
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .bushido,
+  .quotidien,
+  .evolution,
+  .ources,
+  .frise-chronologique {
+    padding: 24px 20px;
+  }
 }
