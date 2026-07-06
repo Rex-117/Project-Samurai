@@ -51,11 +51,6 @@ body {
   transition: 1s;
 } */
 
-/* ===========================================
-   Style inspired by FX "Shōgun" viewers guide
-   Dark, cinematic, bold uppercase nav
-   =========================================== */
-
 * {
   margin: 0;
   padding: 0;
@@ -64,29 +59,42 @@ body {
 
 body {
   background-color: #0c0c0c;
+  background-image: url(./img/samurai.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   color: #e8e3d8;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   line-height: 1.7;
 }
-
 /* ---------- HEADER / NAV ---------- */
 
 .header {
-  background-color: #111111;
+  /* background-color: #111111; */
   border-bottom: 2px solid #8a1f1f;
   padding: 0;
-
   background-position: center;
   background-size: cover;
   position: relative;
+}
+
+.header::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  /* adjust 0.6 = darkness, 0–1 */
+  background: rgba(0, 0, 0, 0.16);
+  z-index: 0;
+  pointer-events: none;
 }
 
 .text-box {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #000000;
+  /* background-color: #000000; */
   padding: 18px 0;
 }
 
@@ -108,12 +116,14 @@ body {
   color: #000;
 }
 
-/* ---------- MAIN CONTENT WRAPPER ---------- */
+/* ---------- MAIN CONTENT  ---------- */
 
 .content {
   max-width: 900px;
   margin: 0 auto;
   padding: 60px 24px 100px;
+  position: relative;
+  z-index: 1;
 }
 
 h1 {

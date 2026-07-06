@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---------- BACKGROUND ---------- */
+
+html {
+  background-image: url("img/cthulhu.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: #080808;
+}
+
+body {
+  background: transparent;
+  color: #e8e3d8;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+/* ---------- NAV ---------- */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.92);
+  border-bottom: 2px solid #6b1111;
+  backdrop-filter: blur(6px);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+  height: 64px;
+}
+
+nav h2 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #d4af6a;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.menu a {
+  display: inline-block;
+  text-decoration: none;
+  color: #c9bfa5;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  padding: 22px 20px;
+  border-bottom: 3px solid transparent;
+  transition:
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.menu a:hover {
+  color: #d4af6a;
+  border-bottom-color: #d4af6a;
+}
+
+/* Active link — add class="active" to current page link */
+.menu a.active {
+  color: #d4af6a;
+  border-bottom-color: #6b1111;
+}
+
+/* ---------- MAIN ---------- */
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 32px 120px;
+}
+
+/* ---------- H1 ---------- */
+
+h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #f4ede0;
+  text-align: center;
+  margin-bottom: 70px;
+  padding-bottom: 24px;
+  border-bottom: 2px solid #6b1111;
+}
+
+/* ---------- STAGGERED SECTIONS ----------
+   Odd sections sit LEFT, even sit RIGHT.
+   Each is ~46% wide — leaving the center
+   visible so the background character shows. */
+
+section {
+  max-width: 46%;
+  margin-bottom: 60px;
+}
+
+section:nth-child(odd) {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+section:nth-child(even) {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+/* ---------- SECTION CARDS ---------- */
+
+section > div {
+  background-color: rgba(10, 10, 10, 0.82);
+  border: 1px solid rgba(107, 17, 17, 0.5);
+  border-radius: 4px;
+  padding: 32px 36px;
+  backdrop-filter: blur(4px);
+}
+
+/* ---------- HEADINGS ---------- */
+
+h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #d4af6a;
+  margin-bottom: 18px;
+  margin-top: 0;
+  padding-left: 14px;
+  border-left: 4px solid #6b1111;
+}
+
+h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #c9bfa5;
+  margin-top: 24px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ---------- PARAGRAPHS ---------- */
+
+p {
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: #d6d0c4;
+  margin-bottom: 14px;
+}
+
+.introduction p {
+  font-size: 1rem;
+  color: #ece6d8;
+}
+
+strong {
+  color: #d4af6a;
+  font-weight: 600;
+}
+
+em {
+  color: #c9bfa5;
+  font-style: italic;
+}
+
+/* ---------- LISTS ---------- */
+
+ul,
+ol {
+  margin: 8px 0 16px 22px;
+}
+
+ul li,
+ol li {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  color: #d6d0c4;
+}
+
+ul li::marker {
+  color: #6b1111;
+}
+
+ol li::marker {
+  color: #d4af6a;
+  font-weight: 600;
+}
+
+/* ---------- LINKS ---------- */
+
+a {
+  color: #d4af6a;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(212, 175, 106, 0.3);
+  transition: border-color 0.25s ease;
+}
+
+a:hover {
+  border-bottom-color: #d4af6a;
+}
+
+/* ---------- IMAGE ---------- */
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 20px auto 0;
+  border-radius: 4px;
+  border: 1px solid #2a2a2a;
+  filter: grayscale(10%) contrast(1.05);
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  section,
+  section:nth-child(odd),
+  section:nth-child(even) {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  nav {
+    padding: 0 16px;
+  }
+
+  .menu a {
+    padding: 22px 12px;
+    font-size: 0.72rem;
+    letter-spacing: 1.5px;
+  }
+
+  main {
+    padding: 40px 16px 80px;
+  }
+}
