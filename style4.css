@@ -7,17 +7,17 @@
 /* ---------- BACKGROUND ---------- */
 
 html {
-  background-image: url("img/ghibli.jpg");
+  background-image: url("/img/ghibli.jpg");
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-color: #080808;
+  background-color: #080e08;
 }
 
 body {
   background: transparent;
-  color: #e8e3d8;
+  color: #e8ede0;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   line-height: 1.7;
@@ -26,33 +26,40 @@ body {
 
 /* ---------- NAV ---------- */
 
-header {
+nav {
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: rgba(0, 0, 0, 0.92);
-  border-bottom: 2px solid #6b1111;
-  backdrop-filter: blur(6px);
-}
-
-nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.92);
+  border-bottom: 2px solid #2d6a2d;
+  backdrop-filter: blur(6px);
   padding: 0 32px;
   height: 64px;
 }
 
-nav h2 {
+.logo_titre {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  opacity: 0.85;
+  margin-top: 5px;
+}
+
+.logo_titre h2 {
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 4px;
   text-transform: uppercase;
-  color: #d4af6a;
-  border: none;
-  padding: 0;
+  color: #8fbe6a;
   margin: 0;
 }
 
@@ -62,10 +69,14 @@ nav h2 {
   gap: 0;
 }
 
+.menu div {
+  display: flex;
+}
+
 .menu a {
   display: inline-block;
   text-decoration: none;
-  color: #c9bfa5;
+  color: #c9d4b8;
   font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 2.5px;
@@ -78,18 +89,18 @@ nav h2 {
 }
 
 .menu a:hover {
-  color: #d4af6a;
-  border-bottom-color: #d4af6a;
+  color: #8fbe6a;
+  border-bottom-color: #8fbe6a;
 }
 
 .menu a.active {
-  color: #d4af6a;
-  border-bottom-color: #6b1111;
+  color: #8fbe6a;
+  border-bottom-color: #2d6a2d;
 }
 
-/* ---------- MAIN ---------- */
+/* ---------- PAGE WRAPPER ---------- */
 
-main {
+.page {
   max-width: 1200px;
   margin: 0 auto;
   padding: 60px 32px 120px;
@@ -102,62 +113,53 @@ h1 {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #f4ede0;
+  color: #f0f4e8;
   text-align: center;
   margin-bottom: 70px;
   padding-bottom: 24px;
-  border-bottom: 2px solid #6b1111;
+  border-bottom: 2px solid #2d6a2d;
+  text-shadow: #000000 5px 0 5px;
 }
 
-/* ---------- STAGGERED SECTIONS ----------
-   Odd sections sit LEFT, even sit RIGHT.
-   Each is ~46% wide — leaving the center
-   visible so the background character shows. */
-
-section {
+.page > div {
   max-width: 46%;
-  margin-bottom: 60px;
-}
-
-section:nth-child(odd) {
-  margin-right: auto;
-  margin-left: 0;
-}
-
-section:nth-child(even) {
-  margin-left: auto;
-  margin-right: 0;
-}
-
-/* ---------- SECTION CARDS ---------- */
-
-section > div {
-  background-color: rgba(10, 10, 10, 0.82);
-  border: 1px solid rgba(107, 17, 17, 0.5);
+  margin-bottom: 52px;
+  background-color: rgba(5, 12, 5, 0.82);
+  border: 1px solid rgba(45, 106, 45, 0.45);
   border-radius: 4px;
   padding: 32px 36px;
   backdrop-filter: blur(4px);
 }
 
+.page > div:nth-child(odd) {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+.page > div:nth-child(even) {
+  margin-left: auto;
+  margin-right: 0;
+}
+
 /* ---------- HEADINGS ---------- */
 
 h2 {
-  font-size: 1.4rem;
+  font-size: 1.35rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  color: #d4af6a;
-  margin-bottom: 18px;
+  color: #8fbe6a;
+  margin-bottom: 16px;
   margin-top: 0;
   padding-left: 14px;
-  border-left: 4px solid #6b1111;
+  border-left: 4px solid #2d6a2d;
 }
 
 h3 {
-  font-size: 1.05rem;
+  font-size: 1.02rem;
   font-weight: 600;
-  color: #c9bfa5;
-  margin-top: 24px;
+  color: #b8cba0;
+  margin-top: 22px;
   margin-bottom: 10px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -168,23 +170,18 @@ h3 {
 p {
   font-size: 0.95rem;
   font-weight: 300;
-  color: #d6d0c4;
+  color: #cdd6be;
   margin-bottom: 14px;
 }
 
 .introduction p {
   font-size: 1rem;
-  color: #ece6d8;
+  color: #e2ebd4;
 }
 
 strong {
-  color: #d4af6a;
+  color: #8fbe6a;
   font-weight: 600;
-}
-
-em {
-  color: #c9bfa5;
-  font-style: italic;
 }
 
 /* ---------- LISTS ---------- */
@@ -198,29 +195,29 @@ ul li,
 ol li {
   margin-bottom: 8px;
   font-size: 0.95rem;
-  color: #d6d0c4;
+  color: #cdd6be;
 }
 
 ul li::marker {
-  color: #6b1111;
+  color: #2d6a2d;
 }
 
 ol li::marker {
-  color: #d4af6a;
+  color: #8fbe6a;
   font-weight: 600;
 }
 
 /* ---------- LINKS ---------- */
 
 a {
-  color: #d4af6a;
+  color: #8fbe6a;
   text-decoration: none;
-  border-bottom: 1px solid rgba(212, 175, 106, 0.3);
+  border-bottom: 1px solid rgba(143, 190, 106, 0.3);
   transition: border-color 0.25s ease;
 }
 
 a:hover {
-  border-bottom-color: #d4af6a;
+  border-bottom-color: #8fbe6a;
 }
 
 /* ---------- IMAGE ---------- */
@@ -231,8 +228,7 @@ img {
   height: auto;
   margin: 20px auto 0;
   border-radius: 4px;
-  border: 1px solid #2a2a2a;
-  filter: grayscale(10%) contrast(1.05);
+  border: 1px solid #1a2e1a;
 }
 
 /* ---------- RESPONSIVE ---------- */
@@ -242,9 +238,9 @@ img {
     font-size: 1.7rem;
   }
 
-  section,
-  section:nth-child(odd),
-  section:nth-child(even) {
+  .page > div,
+  .page > div:nth-child(odd),
+  .page > div:nth-child(even) {
     max-width: 100%;
     margin-left: 0;
     margin-right: 0;
@@ -255,12 +251,12 @@ img {
   }
 
   .menu a {
-    padding: 22px 12px;
-    font-size: 0.72rem;
+    padding: 22px 10px;
+    font-size: 0.7rem;
     letter-spacing: 1.5px;
   }
 
-  main {
+  .page {
     padding: 40px 16px 80px;
   }
 }
