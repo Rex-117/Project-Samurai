@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---------- BACKGROUND ---------- */
+
+html {
+  background-image: url("img/season2.webp");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: #080808;
+}
+
+body {
+  background: transparent;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- NAV ---------- */
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.92);
+  border-bottom: 2px solid #6b1111;
+  backdrop-filter: blur(6px);
+  padding: 0 32px;
+  padding-right: 31px;
+  height: 64px;
+}
+
+.logo_titre {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo img {
+  margin-top: 7px;
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  opacity: 0.85;
+  border-radius: 4px;
+}
+
+.logo_titre h2 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #d4af6a;
+  margin: 0;
+  padding-top: 2px;
+  padding-left: 15px;
+  border-left: 4px solid #d4af6a;
+  width: 158.283px;
+  height: 23.1167px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.menu div {
+  display: flex;
+}
+
+.menu a {
+  display: inline-block;
+  text-decoration: none;
+  color: #c9bfa5;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  padding: 22px 20px;
+  border-bottom: 3px solid transparent;
+  transition:
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.menu a:hover {
+  color: #d4af6a;
+  border-bottom-color: #d4af6a;
+}
+
+.menu a.active {
+  color: #d4af6a;
+  border-bottom-color: #6b1111;
+}
+
+/* ---------- MAIN ---------- */
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 60px 24px;
+  gap: 28px;
+  border-bottom: 2px solid #6b1111;
+}
+
+/* ---------- PAGE TITLE ---------- */
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #f4ede0;
+  text-align: center;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.9);
+}
+
+.video-wrapper {
+  width: 100%;
+  max-width: 920px;
+  aspect-ratio: 16 / 9;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 1px rgba(212, 175, 106, 0.2),
+    0 8px 60px rgba(0, 0, 0, 0.85);
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* ---------- CAPTION ---------- */
+
+.caption {
+  font-size: 1.1rem;
+  color: #dad4c2;
+  text-align: center;
+  letter-spacing: 0.5px;
+  max-width: 850px;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.8);
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 768px) {
+  nav {
+    padding: 0 16px;
+  }
+
+  .menu a {
+    padding: 22px 10px;
+    font-size: 0.7rem;
+    letter-spacing: 1.5px;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  main {
+    padding: 40px 16px;
+  }
+}

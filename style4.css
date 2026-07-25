@@ -22,6 +22,7 @@ body {
   font-weight: 300;
   line-height: 1.7;
   min-height: 100vh;
+  border-bottom: 2px solid #2d6a2d;
 }
 
 /* ---------- NAV ---------- */
@@ -36,7 +37,7 @@ nav {
   background-color: rgba(0, 0, 0, 0.92);
   border-bottom: 2px solid #2d6a2d;
   backdrop-filter: blur(6px);
-  padding: 0 32px;
+  padding: 0 31px;
   height: 64px;
 }
 
@@ -47,14 +48,15 @@ nav {
 }
 
 .logo img {
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
   object-fit: contain;
   opacity: 0.85;
-  margin-top: 5px;
+  margin-top: 0px;
 }
 
 .logo_titre h2 {
+  padding-top: 1px;
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 4px;
